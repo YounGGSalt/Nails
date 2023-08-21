@@ -1,0 +1,938 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+
+body {
+    background-color: rgb(10, 10, 10);
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: all 0.2s;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(6, 6, 6, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: linear-gradient(to bottom,
+    rgb(40, 40, 40), rgb(35, 35, 35), rgb(30, 30, 30), 
+    rgb(25, 25, 25), rgb(20, 20, 20));
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom,
+    rgb(45, 45, 45), rgb(40, 40, 40), rgb(35, 35, 35), 
+    rgb(30, 30, 30), rgb(25, 25, 25));
+}
+
+button {
+    transition: 0.2s;
+}
+
+button:hover {
+    transition: 0.3s;
+    transform: translate(0, -1px);
+}
+
+.TopFixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 7%;
+    width: 100%;
+    background-color: rgba(12, 12, 12, 0.8);
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 50px 1px rgba(30, 30, 30, 0.5);
+    text-align: center;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: "Josefin Sans" sans-serif;
+    padding-top: 3px;
+    -ms-user-select: none; 
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	user-select: none;
+    z-index: 2;
+}
+
+.BrandName {
+    position: relative;
+    font-size: 130%;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px white;
+}
+
+.Adress {
+    position: relative;
+    top: -4px;
+    font-size: 90%;
+    font-weight: 100;
+    color: rgb(180, 180, 180);
+}
+
+.AccountBt {
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    background-color: rgb(31, 31, 31);
+    font-size: 120%;
+    color: rgb(220, 220, 220);
+    border: none;
+    border-radius: 10px;
+}
+
+.AccountBt:hover {
+    background-color: rgb(37, 37, 37);
+    color: rgb(250, 250, 250);
+}
+
+.MainBody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    padding-bottom: 30px;
+    top: 7%;
+    left: 50%;
+    width: calc(30% + 400px);
+    margin-left: calc(-30%/2 + -400px/2);
+    transition: all 0.4s;
+}
+
+.Block {
+    margin: 30px 5px 10px 5px;
+    position: relative;
+    background-color: rgba(20, 20, 20);
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.Block:hover {
+    background-color: rgb(26, 26, 26);
+}
+
+.Block-img {
+    height: 350px;
+    width: 350px;
+    cursor: pointer;
+}
+
+.Block-inf {
+    height: 350px;
+    width: calc(100% - 380px);
+    max-width: 1000px;
+}
+
+.Block-description {
+    height: 350px;
+    width: calc(100% - 25px);
+    max-width: 1360px;
+}
+
+.Block-masters {
+    height: 350px;
+    width: calc(100% - 25px);
+    max-width: 1360px;
+}
+
+.Block-services {
+    height: 600px;
+    width: calc(100% - 25px);
+    max-width: 1360px;
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+}
+
+.Block-reviews {
+    height: 800px;
+    width: calc(100% - 25px);
+    max-width: 1360px;
+}
+
+.iIMG {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.I1 {
+    top: 0%;
+    left: 0%;
+    background-image: url(img/I1.jpg);
+    transition: 0.4s;
+}
+
+.I1.cl {
+    left: 100%;
+    transition: 0.4s;
+}
+
+.I1.cl1 {
+    left: -100%;
+    transition: 0s;
+}
+
+.I2 {
+    top: 0%;
+    left: -100%;
+    background-image: url(img/I2.png);
+    transition: 0s;
+}
+
+.I2.cl {
+    left: 0%;
+    transition: 0.4s;
+}
+
+.I2.cl1 {
+    left: 100%;
+    transition: 0.4s;
+}
+
+.I3 {
+    top: 0%;
+    left: 100%;
+    background-image: url(img/I3.jpg);
+    transition: 0.4s;
+}
+
+.I3.cl {
+    left: -100%;
+    transition: 0s;
+}
+
+.I3.cl1 {
+    left: 0%;
+    transition: 0.4s;
+}
+
+.ProgressBody {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    height: 70px;
+    width: 100%;
+}
+
+.Point {
+    position: absolute;
+    height: 10px;
+    width: 40px;
+    margin-top: -5px;
+    margin-left: -20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.PP1 {
+    top: 50%;
+    left: 35%;
+}
+
+.PP2 {
+    top: 50%;
+    left: 50%;
+}
+
+.PP3 {
+    top: 50%;
+    left: 65%;
+}
+
+.Progress {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 0%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.Pr1.cl {
+    left: 100%;
+    width: 0%;
+    transition: 0.2s;
+}
+
+.Pr2.cl {
+    left: 100%;
+    width: 0%;
+    transition: 0.2s;
+}
+
+.Pr3.cl {
+    left: 100%;
+    width: 0%;
+    transition: 0.2s;
+}
+
+.Logo  {
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    height: 140px;
+    width: 140px;
+    margin-top: -70px;
+    margin-left: -70px;
+    border: none;
+    border-radius: 15px;
+    background-image: url(img/Logo.jpg);
+    background-position: center;
+    background-size: 120%;
+}
+
+.LogoName {
+    position: relative;
+    top: 20%;
+    left: 120%;
+    font-size: 200%;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px white;
+}
+
+.LogoAdress {
+    position: relative;
+    top: 20%;
+    left: 120%;
+    font-size: 90%;
+    font-weight: 100;
+    color: rgb(200, 200, 200);
+}
+
+.PhoneNum {
+    position: relative;
+    top: 60%;
+    left: 5%;
+    font-size: 90%;
+    font-weight: 100;
+    color: rgb(200, 200, 200);
+    cursor: pointer;
+}
+
+.Timing {
+    position: relative;
+    top: 65%;
+    left: 5%;
+    font-size: 90%;
+    font-weight: 100;
+    color: rgb(200, 200, 200);
+    cursor: pointer;
+}
+
+.Rating {
+    position: absolute;
+    top: 190%;
+    left: 72%;
+    height: 80px;
+    width: 200px;
+    margin-top: -40px;
+    margin-left: -100px;
+    -ms-user-select: none; 
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	user-select: none;
+}
+
+.MainRate {
+    position: relative;
+    top: 18%;
+    left: 5%;
+    font-size: 200%;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+}
+
+.ReviewsAmount {
+    position: relative;
+    top: -32%;
+    left: 40%;
+    font-size: 100%;
+    font-weight: 100;
+    color: rgb(200, 200, 200);
+}
+
+.RatingStars {
+    position: absolute;
+    top: 38%;
+    left: 60%;
+    height: 40px;
+    width: 140px;
+    margin-top: -20px;
+    margin-left: -70px;
+    color: rgb(230, 230, 230);
+    padding-top: 6px;
+    text-align: center;
+    font-size: 90%;
+}
+
+.star-yellow {
+    color: rgb(250, 180, 30);
+}
+
+@keyframes gradient1 {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.BookBt {
+    position: absolute;
+    right: 50px;
+    bottom: 35px;
+    height: 60px;
+    width: 200px;
+    margin-top: -30px;
+    margin-left: -100px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(-45deg,
+    rgb(240, 20, 70), rgb(209, 31, 0), rgb(240, 20, 70));
+    background-size: 200%;
+    animation: gradient1 6s ease infinite;
+    color: rgb(210, 210, 210);
+    font-size: 140%;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+    text-align: left;
+    box-shadow: 0px 0px 30px 1px rgba(252, 0, 63, 0.5);
+    padding-left: 15px;
+}
+
+.BookBtText {
+    position: relative;
+    top: 20%;
+}
+
+.iBookBt {
+    position: relative;
+    top: -65%;
+    left: 82%;
+}
+
+.TopDescription {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    font-size: 150%;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+}
+
+.MainDescription {
+    position: absolute;
+    top: 18%;
+    left: 3%;
+    font-size: 100%;
+    font-weight: 100;
+    max-height: 260px;
+    max-width: 50%;
+    color: rgb(200, 200, 200);
+    overflow-y: scroll;
+    border-radius: 5px;
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+}
+
+.LocationMap {
+    position: absolute;
+    top: 50%;
+    right: 45px;
+    height: 260px;
+    width: 260px;
+    margin-top: -130px;
+    margin-left: -130px;
+    background-color: rgb(15, 15, 15);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.MasterBody {
+    position: absolute;
+    top: 55%;
+    left: 1%;
+    height: 270px;
+    width: 96%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -130px;
+    background-color: rgba(15, 15, 15, 0);
+    border-radius: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.Master {
+    position: relative;
+    top: 48%;
+    height: 240px;
+    width: 200px;
+    margin-top: -120px;
+    background-color: rgb(30, 30, 30);
+    border: 2px solid rgb(37, 37, 37);
+    box-shadow: 0px 2px 5px rgb(49, 49, 49);
+    border-radius: 15px;
+    text-align: center;
+    -ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.Master:hover {
+    transform: translate(0, -2px);
+    background-color: rgb(40, 40, 40);
+    border: 2px solid rgb(110, 110, 110);
+    transition: 0.3s;
+}
+
+.Master-1 {
+    left: 0%;
+    margin-top: -120px;
+}
+
+.Master-2 {
+    left: 220px;
+    margin-top: -240px;
+}
+
+.Master-3 {
+    left: 440px;
+    margin-top: -240px;
+}
+
+.Master-4 {
+    left: 660px;
+    margin-top: -240px;
+}
+
+.Master-5 {
+    left: 880px;
+    margin-top: -240px;
+}
+
+.MastersText {
+    position: absolute;
+    top: 20px;
+    left: 3%;
+    font-size: 150%;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+}
+
+.MasterLogo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+    background-color: rgb(20, 20, 20);
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 25px;
+    background-size: 110%;
+    background-position: center;
+}
+
+.ML1 {
+    background-image: url(img/MZ.jpg);
+}
+
+.ML2 {
+    background-image: url(img/);
+}
+
+.ML3 {
+    background-image: url(img/);
+}
+
+.ML4 {
+    background-image: url(img/);
+}
+
+.ML5 {
+    background-image: url(img/);
+}
+
+.MasterName {
+    position: relative;
+    top: 38%;
+    font-size: 110%;
+    font-weight: 300;
+    color: rgb(230, 230, 230);
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+}
+
+.MasterTitle {
+    position: relative;
+    top: 38%;
+    font-size: 90%;
+    font-weight: 300;
+    color: rgb(180, 180, 180);
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+}
+
+.ServicesText {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    top: 20px;
+    left: 3%;
+    font-size: 150%;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+}
+
+.M_ServicesBody {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    height: 500px;
+    width: 96%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -130px;
+    background-color: rgba(15, 15, 15);
+    border-radius: 15px;
+    z-index: 2;
+    display: block;
+    opacity: 1;
+}
+
+.M_ServicesBody.cl {
+    z-index: -2;
+    display: none;
+    opacity: 0;
+}
+
+.B_ServicesBody {
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    height: 500px;
+    width: 96%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -130px;
+    background-color: rgba(15, 15, 15);
+    border-radius: 15px;
+    z-index: -2;
+    display: none;
+    opacity: 0;
+}
+
+.B_ServicesBody.cl {
+    z-index: 2;
+    display: block;
+    opacity: 1;
+}
+
+.M_ServicesBt {
+    position: absolute;
+    top: 10.4%;
+    left: 41%;
+    height: 36px;
+    width: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -18px;
+    margin-left: -60px;
+    background-color: rgba(15, 15, 15);
+    color: rgb(230, 230, 230);
+    border: none;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.M_ServicesBt:hover,
+.M_ServicesBt.hover {
+    transform: none;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.B_ServicesBt {
+    position: absolute;
+    top: 10.4%;
+    left: 59%;
+    height: 36px;
+    width: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -18px;
+    margin-left: -60px;
+    background-color: rgba(15, 15, 15);
+    color: rgb(230, 230, 230);
+    border: none;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.B_ServicesBt:hover,
+.B_ServicesBt.hover {
+    transform: none;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.Service {
+    margin: 0px 0px 20px 25px;
+    position: relative;
+    height: 100px;
+    width: 95%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(22, 22, 22);
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.Service:hover {
+    background-color: rgb(31, 31, 31);
+}
+
+.ServiceIMG {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    height: 80px;
+    width: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(20, 20, 20);
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.iS1 {
+    background-image: url(img/);
+}
+
+.iS2 {
+    background-image: url(img/);
+}
+
+.iS3 {
+    background-image: url(img/);
+}
+
+.iS4 {
+    background-image: url(img/);
+}
+
+.iS5 {
+    background-image: url(img/);
+}
+
+.iS6 {
+    background-image: url(img/);
+}
+
+.iS7 {
+    background-image: url(img/);
+}
+
+.iS8 {
+    background-image: url(img/);
+}
+
+.iS9 {
+    background-image: url(img/);
+}
+
+.iS10 {
+    background-image: url(img/);
+}
+
+.iS11 {
+    background-image: url(img/);
+}
+
+.iS12 {
+    background-image: url(img/);
+}
+
+.iS13 {
+    background-image: url(img/);
+}
+
+.iS14 {
+    background-image: url(img/);
+}
+
+.iS15 {
+    background-image: url(img/);
+}
+
+.ServiceTitle {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    height: 50px;
+    max-width: 78%;
+    margin-top: -40px;
+    color: rgb(230, 230, 230);
+    font-size: 100%;
+    font-weight: 100;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+    overflow: hidden;
+}
+
+.ServicePrice {
+    position: absolute;
+    top: 75%;
+    left: 100px;
+    height: 26px;
+    max-width: 100px;
+    margin-top: -13px;
+    color: white;
+    font-size: 100%;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+    overflow: hidden;
+}
+
+.ServiceTime {
+    position: absolute;
+    top: 75%;
+    left: 200px;
+    height: 26px;
+    max-width: 100px;
+    margin-top: -13px;
+    color: white;
+    font-size: 100%;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+    overflow: hidden;
+}
+
+.ServiceAddBt {
+    position: absolute;
+    top: 75%;
+    right: 20px;
+    height: 26px;
+    max-width: 100px;
+    margin-top: -13px;
+    color: white;
+    font-size: 100%;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ServiceMastersBt {
+    position: absolute;
+    top: 75%;
+    right: 120px;
+    height: 26px;
+    max-width: 100px;
+    margin-top: -13px;
+    color: white;
+    font-size: 100%;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.TopReviews {
+    position: absolute;
+    top: 20px;
+    left: 3%;
+    font-size: 150%;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    -ms-user-select: none; 
+	-moz-user-select: none;
+	-webkit-user-select: none; 
+	user-select: none;
+}
